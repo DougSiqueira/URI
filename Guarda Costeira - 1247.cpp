@@ -1,8 +1,7 @@
 #include <iostream>
 #include <math.h>
 
-
-    using namespace std;
+using namespace std;
 
 
 void guarda (double D, double VF, double VG){
@@ -14,7 +13,6 @@ void guarda (double D, double VF, double VG){
     if(t1<t2){
         cout << "N"<<endl;
     }
-
     else{
         cout << "S"<<endl;
     }
@@ -28,11 +26,6 @@ int main(){
     while(cin >> D >> VF >>VG){
 
         guarda(D, VF, VG);
-
-
     }
-
-
-
-return 0;
+    return 0;
 }

@@ -56,7 +56,6 @@ void tree::inserir(treeNode* noh, int x){
     }
 
 }
-
 void tree::preOrdem(treeNode* noh){
     if(noh != 0){
         cout <<" "<<noh->d;
@@ -80,27 +79,26 @@ void tree::emOrdem(treeNode* noh){
     }
 }
 int main(){
-tree arvore;
-int c, n, N, casos =1;
-cin >> c;
+    tree arvore;
+    int c, n, N, casos =1;
+    cin >> c;
 
-while(c>0){
-    cin >> n;
-    for(int i=0; i<n; i++){
-        cin >> N;
-        arvore.inserir(arvore.raiz, N);
+    while(c>0){
+        cin >> n;
+        for(int i=0; i<n; i++){
+            cin >> N;
+            arvore.inserir(arvore.raiz, N);
 
+        }
+        cout <<"Case " <<casos<<":"<<endl;
+        cout << "Pre.:"; arvore.preOrdem(arvore.raiz); cout<<endl;
+        cout << "In..:"; arvore.emOrdem(arvore.raiz); cout<<endl;
+        cout << "Post:"; arvore.posOrdem(arvore.raiz); cout<<endl;
+        casos++;
+        cout <<endl;
+        arvore.raiz=0;
+        c--;
     }
-    cout <<"Case " <<casos<<":"<<endl;
-    cout << "Pre.:"; arvore.preOrdem(arvore.raiz); cout<<endl;
-    cout << "In..:"; arvore.emOrdem(arvore.raiz); cout<<endl;
-    cout << "Post:"; arvore.posOrdem(arvore.raiz); cout<<endl;
-    casos++;
-    cout <<endl;
-    arvore.raiz=0;
-    c--;
-
-}
 
     return 0;
 }
